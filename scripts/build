@@ -63,12 +63,16 @@ parse_commandline "$@"
 
 set -e
 
+# Netlify uses the yarn install script in their build image
+# https://github.com/netlify/build-image/blob/9e2ed2d7a049a3153aaf4cb74b9c783b8ef9f7aa/Dockerfile#L153
+YARN_BIN=$HOME/.yarn/bin/yarn
+
 if [ $_arg_withtests = "on" ]
 then
   echo 'Running tests ...'
   # Must install dev dependencies here as well
   # CI flag is important, avoids entering watch mode
-  yarn install --production=false && CI=true yarn test
+  $YARN_BIN install --production=false && CI=true yarn test
 fi
 
 # REPOSITORY_URL: URL to the Git repository the build pulls changes from.
@@ -92,4 +96,4 @@ REACT_APP_CONTEXT="$CONTEXT" \
 REACT_APP_URL="$URL" \
 REACT_APP_DEPLOY_URL="$DEPLOY_URL" \
 REACT_APP_DEPLOY_PRIME_URL="$DEPLOY_PRIME_URL" \
-yarn build
+$YARN_BIN build
