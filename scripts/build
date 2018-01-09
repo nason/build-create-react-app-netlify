@@ -65,7 +65,7 @@ set -e
 
 # Netlify uses the yarn install script in their build image
 # https://github.com/netlify/build-image/blob/9e2ed2d7a049a3153aaf4cb74b9c783b8ef9f7aa/Dockerfile#L153
-YARN_BIN=$HOME/.yarn/bin/yarn
+YARN_BIN="`yarn global bin`/yarn"
 
 if [ $_arg_withtests = "on" ]
 then
