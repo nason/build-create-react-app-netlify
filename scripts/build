@@ -73,7 +73,7 @@ then
   echo 'Running tests ...'
   # Must install dev dependencies here as well
   # CI flag is important, avoids entering watch mode
-  $YARN_BIN install --production=false && CI=true yarn test
+  $YARN_BIN install --production=false && CI=true $YARN_BIN test
 fi
 
 # REPOSITORY_URL: URL to the Git repository the build pulls changes from.
