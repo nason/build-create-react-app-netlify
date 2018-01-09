@@ -63,7 +63,7 @@ parse_commandline "$@"
 
 set -e
 
-# https://github.com/netlify/build-image/blob/9e2ed2d7a049a3153aaf4cb74b9c783b8ef9f7aa/run-build-functions.sh#L41
+https://github.com/netlify/build-image/blob/9e2ed2d7a049a3153aaf4cb74b9c783b8ef9f7aa/run-build-functions.sh#L41
 # Netlify's build environment ends up with a binary at this location
 YARN_BIN=$NETLIFY_CACHE_DIR/yarn/bin
 
