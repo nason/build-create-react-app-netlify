@@ -1,0 +1,8 @@
+{
+  "name": "build-create-react-app-netlify",
+  "version": "1.0.0",
+  "description": "",
+  "bin": "./scripts/build",
+  "author": "Mike Nason",
+  "license": "MIT"
+}
