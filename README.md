@@ -23,18 +23,3 @@ Add a new script to your `package.json`:
 ```
 
 And then configure your Netlify project to run `yarn build-netlify` instead of `yarn build`.
-
-### Running Tests
-
-This script can also run your `create-react-app` project's tests before running the build. Pass the `--withTests` flag to enable this behavior, for example:
-
-```
-{
-  ...,
-  "scripts": {
-    "build-netlify": "build-create-react-app-netlify --withTests"
-  }
-}
-```
-
-
