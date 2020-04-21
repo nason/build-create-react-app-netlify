@@ -1,6 +1,6 @@
 {
   "name": "build-create-react-app-netlify",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "A utility to help make Netlify build variables available to `create-react-app` builds, without ejecting",
   "bin": "./scripts/build",
   "author": "Mike Nason",
